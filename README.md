@@ -10,7 +10,6 @@ This project uses the `google/flan-t5-base` language model to summarize multi-tu
 - One-Shot
 - Few-Shot
 
-All running **free** using open-source tools — no API keys needed!
 
 ---
 
@@ -18,7 +17,7 @@ All running **free** using open-source tools — no API keys needed!
 
 💬 Turns a conversation like this...
 
-Speaker 1: I’m feeling a little sick today.
+>Speaker 1: I’m feeling a little sick today.
 Speaker 2: Oh no, you should get some rest.
 Speaker 1: Yeah, I might take a nap.
 Speaker 2: Good idea. Hope you feel better soon.
@@ -31,18 +30,14 @@ Speaker 2: Good idea. Hope you feel better soon.
 | 🧠 FLAN-T5    | Language model for summarization     |
 | 🤗 Hugging Face Datasets | To load the `daily_dialog` dataset |
 | 🐍 Python     | All code written in Python          |
-| 💻 Google Colab | Free platform to run everything    |
+| 💻 Google Colab | Platform to run everything    |
 
 ---
 
 ## 🚀 How to Use It
 
-### 1️⃣ Open in Google Colab
+### 1️⃣ Install dependencies:
 
-✅ You can use this even if you have no Python installed!
-
-- Download the notebook or copy-paste code into [Google Colab](https://colab.research.google.com/)
-- Install dependencies:
   ```python
   !pip install transformers datasets sentencepiece
   
@@ -106,6 +101,7 @@ Prompt engineering techniques (zero-shot, one-shot, few-shot)
 Using Hugging Face datasets and models with no API
 
 How model prompts affect the quality of generative output
+
 
 
 
