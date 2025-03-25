@@ -15,9 +15,9 @@ This project uses the `google/flan-t5-base` language model to summarize multi-tu
 
 ## 🧩 What This Project Does
 
-💬 Turns a conversation like this...
+> 💬 Turns a conversation like this...
 
->Speaker 1: I’m feeling a little sick today.
+Speaker 1: I’m feeling a little sick today.
 Speaker 2: Oh no, you should get some rest.
 Speaker 1: Yeah, I might take a nap.
 Speaker 2: Good idea. Hope you feel better soon.
