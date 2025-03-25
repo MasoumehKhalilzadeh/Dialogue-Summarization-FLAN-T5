@@ -49,18 +49,19 @@ Speaker 2: Good idea. Hope you feel better soon.
 2️⃣ Load the Dialogue Dataset
 
 
+```python
 from datasets import load_dataset
 dataset = load_dataset("daily_dialog", trust_remote_code=True)
-
+```
 
 3️⃣ Pick a Dialogue
 
-
+```python
 def format_dialogue(dialogue_lines):
     return "\n".join([f"Speaker {i % 2 + 1}: {line}" for i, line in enumerate(dialogue_lines)])
 
 sample_dialogue = format_dialogue(dataset["test"][0]["dialog"])
-
+```
 
 4️⃣ Choose a Prompting Style
 
@@ -73,20 +74,20 @@ sample_dialogue = format_dialogue(dataset["test"][0]["dialog"])
 
 5️⃣ Load the Model & Generate Summary
 
-
+```python
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
 model_name = "google/flan-t5-base"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
-
+```
 
 ```python
 def generate_summary(prompt):
     inputs = tokenizer(prompt, return_tensors="pt", truncation=True)
     output = model.generate(**inputs, max_length=100)
     return tokenizer.decode(output[0], skip_special_tokens=True)
-
+```
 
 📚 Dataset Info
 
